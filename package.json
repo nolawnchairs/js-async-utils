@@ -1,7 +1,7 @@
 {
   "name": "@nolawnchairs/async",
-  "version": "1.5.6",
-  "description": "Promise-based utility wrappers around setTimeout and setInterval",
+  "version": "1.0.0",
+  "description": "Utility wrappers for easier async programming in JavaScript",
   "main": "index.js",
   "keywords": [],
   "author": "Michael Wieczorek <nolawnchairs@gmail.com>",
