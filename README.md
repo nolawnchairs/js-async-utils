@@ -12,7 +12,7 @@ yard add @nolawnchairs/async
 ## Usage
 
 
-### `async Async.wait`
+### `Async.wait`
 ```typescript
 async (ms: number) => Promise<void>
 ```
@@ -25,7 +25,7 @@ async function foo() {
 }
 ```
 
-### `async Async.delayed`
+### `Async.delayed`
 ```typescript
 async <T>(ms: number, callback: AsyncSupplier<T>) => Promise<T>
 ```
@@ -41,7 +41,7 @@ function foo() {
 }
 ```
 
-### `async Async.scheduled`
+### `Async.scheduled`
 ```typescript
 async (date: Date, callback: VoidFunction) => void
 ```
@@ -53,7 +53,7 @@ const date = new Date((Date.now() + 3600) * 1000)
 Async.scheduled(date, () => console.log('This will be called in one hour'))
 ```
 
-### `async Async.waitUntil`
+### `Async.waitUntil`
 ```typescript
 async (condition: AsyncSupplier<boolean>, waitInterval?: number) => Promise<void>
 ```
@@ -67,7 +67,7 @@ async function foo() {
 }
 ```
 
-### `async Async.waitUntilResolved`
+### `Async.waitUntilResolved`
 ```typescript
 async (timeout: number, condition: AsyncSupplier<boolean>, waitInterval?: number) => Promise<void>
 ```
@@ -85,7 +85,7 @@ async function foo() {
 }
 ```
 
-### `async Async.awaitWithTimeout`
+### `Async.awaitWithTimeout`
 ```typescript
 async <T>(timeout: number, runner: AsyncSupplier<T>) => Promise<T>
 ```
