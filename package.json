@@ -1,0 +1,45 @@
+{
+  "name": "@nolawnchairs/async",
+  "version": "1.5.6",
+  "description": "Promise-based utility wrappers around setTimeout and setInterval",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Michael Wieczorek <nolawnchairs@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nolawnchairs/js-async-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nolawnchairs/js-async-utils/issues"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^14.11.2",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "define": "dts-bundle-generator -o index.d.ts ./src/index.ts -config ./dts-config.json",
+    "build": "tsc && npm rum define",
+    "test": "jest"
+  }
+}
