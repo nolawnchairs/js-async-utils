@@ -1,6 +1,8 @@
 src
 node_modules
 test
-tsconfig.json
+tsconfig*.json
 .gitignore
 .git
+dts-config.json
+README.md
