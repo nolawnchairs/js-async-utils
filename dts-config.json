@@ -9,7 +9,7 @@
       "output": {
         "inlineDeclareGlobals": false,
         "sortNodes": true,
-        "umdModuleName": "Futures"
+        "noBanner": true
       }
     }
   ]
