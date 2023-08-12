@@ -27,12 +27,12 @@ export namespace Async {
    * around setTimeout
    *
    * @export
-   * @param {number} ms the amount of milliseconds to wait
+   * @param {number} delay the amount of milliseconds to wait
    * @param {AsyncSupplier<T> | Supplier<T>} callback the supplier function to be called
    * @returns {Promise<T>}
    */
-  export async function delayed<T>(ms: number, callback: AsyncSupplier<T> | Supplier<T>): Promise<T> {
-    await wait(ms)
+  export async function delayed<T>(delay: number, callback: AsyncSupplier<T> | Supplier<T>): Promise<T> {
+    await wait(delay)
     return callback()
   }
 
@@ -45,14 +45,13 @@ export namespace Async {
    */
   export function scheduled(date: Date, callback: VoidFunction) {
     const now = Date.now()
-    const callIn = date.getTime() - now
-    if (callIn < 0) {
+    const delay = date.getTime() - now
+    if (delay < 0) {
       const attempt = date.getTime()
       const diff = attempt - now
-      const sign = diff < 0 ? '' : '+'
-      throw new Error(`Cannot schedule a task for a date in the past. Attempted to schedule for ${attempt} at ${now} (${sign}${diff}ms)`)
+      throw new Error(`Cannot schedule a task for a date in the past. Attempted to schedule for ${attempt} (${diff}ms)`)
     }
-    setTimeout(callback, callIn)
+    wait(delay).then(callback)
   }
 
   /**
