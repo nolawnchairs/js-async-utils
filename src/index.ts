@@ -124,7 +124,7 @@ export namespace Async {
       ),
       new Promise<T>((_, reject) => {
         setTimeout(() => reject(new Error(`Timeout of ${timeout} expired while awaiting runner function to resolve`)), timeout)
-      })
+      }),
     ])
   }
 }

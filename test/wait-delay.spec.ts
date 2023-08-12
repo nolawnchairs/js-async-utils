@@ -1,5 +1,4 @@
 
-
 import { Async } from '../src'
 
 describe('Async.wait', () => {
