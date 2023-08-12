@@ -81,16 +81,5 @@ module.exports = {
         },
       },
     ],
-    '@typescript-eslint/no-restricted-imports': [
-      'error',
-      {
-        patterns: [
-          {
-            group: ['.*'],
-            message: 'Relative imports not allowed. Use module aliasing',
-          },
-        ],
-      },
-    ],
   },
 }
