@@ -1,6 +1,6 @@
 {
   "name": "@nolawnchairs/async",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility wrappers for easier async programming in JavaScript",
   "main": "index.js",
   "keywords": [],
